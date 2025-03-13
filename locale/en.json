@@ -1,0 +1,50 @@
+{
+  "navbar": {
+    "home": "About",
+    "profile": "Profile",
+    "coffee": "Coffee",
+    "beer": "Beer"
+  },
+  "not_found": {
+    "title": "Page not found",
+    "message": "Sorry, the page you are looking for does not exist.",
+    "navigate_home": "Home"
+  },
+  "user": {
+    "user_menu": {
+      "logout": "Logout"
+    }
+  },
+  "login_dialog": {
+    "title": "Login",
+    "close": "Cancel",
+    "username": "Username:",
+    "submit": "Login"
+  },
+  "page": {
+    "button": {
+      "login": "Login"
+    }
+  },
+  "profile_page": {
+    "username": "Username:",
+    "logged_in_at": "Logged in at:",
+    "anonymus": "Anonymus",
+    "not_logged_in": "You are not logged in."
+  },
+  "chat_page": {
+    "beer": {
+      "hi": "Hi, nice to see you!",
+      "message": "I'm frontier language model, specialized in talking about beer.",
+      "question": "How can I help you?"
+    },
+    "coffee": {
+      "hi": "Hi, nice to see you!",
+      "message": "I'm frontier language model, specialized in talking about coffee.",
+      "question": "How can I help you?"
+    }
+  },
+  "chat_input": {
+    "prompt": "Type your message here, try markdown ;)\nNew line: Shift+Enter\nSubmit: Enter"
+  }
+}

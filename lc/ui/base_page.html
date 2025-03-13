@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sunset">
+  <head>
+    <title>Lipsum Chat</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- DaisyUI and Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- htmx -->
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+  </head>
+  <body class="flex flex-col items-center w-screen h-screen">
+    <!-- slot[content] -->
+    <div id="dialogs" class="absolute"></div>
+  </body>
+</html>
