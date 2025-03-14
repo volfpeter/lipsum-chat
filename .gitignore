@@ -6,5 +6,8 @@ dist/
 wheels/
 *.egg-info
 
+# Vercel
+.vercel
+
 # Virtual environments
 .venv

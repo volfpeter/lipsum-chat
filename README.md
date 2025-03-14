@@ -19,7 +19,7 @@ Need help kickstarting a new project with this or a similar toolchain? [Get in t
 
 For a seamless experience, you need `uv` to be installed. If not available, you can find the required dependencies in `pyproject.toml`.
 
-With `uv` in place, all you need to do is run `uv run uvicorn app.main:make_app --factory --reload` and open http://127.0.0.1:8000/ in your browser.
+With `uv` in place, all you need to do is run `uv run uvicorn app.main:app --reload` and open http://127.0.0.1:8000/ in your browser.
 
 `uv run` tools:
 
