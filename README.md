@@ -27,6 +27,14 @@ With `uv` in place, all you need to do is run `uv run uvicorn app.main:app --rel
 - Formatting: `ruff format .` or `ruff format . --check` for format check.
 - Static type analysis: `uv run mypy .`
 
+## Deployment
+
+`vercel.json` contains the configuration for deployment on Vercel.
+
+The Vercel Python runtime only supports `requirements.txt`. The requirements file can be generated with `uv export --no-dev > requirements.txt`. It must be done manually before every push to the `main` branch.
+
+The Vercel Python runtime is experimental at this time (March 2025), so this config may become outdated relatively soon.
+
 ## Similar projects
 
 - [fastapi-htmx-tailwind-example](https://github.com/volfpeter/fastapi-htmx-tailwind-example): A similar, but slightly outdated technology demonstration using Jinja and MongDB, with more focus on HTMX.

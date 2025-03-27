@@ -7,16 +7,13 @@ requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115.11",
     "fasthx>=2.3.0",
-    "htmy>=0.7.1",
+    "htmy>=0.7.3",
     "python-multipart>=0.0.20",
     "uvicorn>=0.34.0",
 ]
 
 [dependency-groups]
-dev = [
-    "mypy>=1.15.0",
-    "ruff>=0.9.10",
-]
+dev = ["mypy>=1.15.0", "ruff>=0.9.10"]
 
 [tool.mypy]
 strict = true
@@ -24,21 +21,16 @@ show_error_codes = true
 
 [tool.ruff]
 line-length = 108
-exclude = [
-    ".git",
-    ".mypy_cache",
-    ".ruff_cache",
-    ".venv",
-]
+exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv"]
 lint.select = [
-    "B",  # flake8-bugbear
-    "C",  # flake8-comprehensions
-    "E",  # pycodestyle errors
-    "F",  # pyflakes
-    "I",  # isort
-    "S",  # flake8-bandit - we must ignore these rules in tests
-    "W",  # pycodestyle warnings
+    "B", # flake8-bugbear
+    "C", # flake8-comprehensions
+    "E", # pycodestyle errors
+    "F", # pyflakes
+    "I", # isort
+    "S", # flake8-bandit - we must ignore these rules in tests
+    "W", # pycodestyle warnings
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"lc/chat/bot/*_corpus.py" = ["E501"]  # line too long
+"lc/chat/bot/*_corpus.py" = ["E501"] # line too long
