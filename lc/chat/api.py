@@ -4,7 +4,7 @@ from fastapi import APIRouter, Form
 from fasthx.htmy import HTMY
 from htmy import Component, Text
 
-from lc.ui.chat_bubble import chat_bubble
+from lc.ui.chat_bubble import chat_bubble, chat_bubble_with_clipboard
 from lc.ui.chat_container import chat_container_ref
 from lc.ui.chat_input import chat_input
 from lc.ui.md import markdown
@@ -22,7 +22,7 @@ def make_api(htmy: HTMY) -> APIRouter:
     async def chat(message: Annotated[Message, Form()], key: ChatPageKey) -> Component:
         return (
             chat_bubble(markdown(Text(message.message)), speaker="user"),
-            chat_bubble(*get_response(message.message, corpus=key)),
+            chat_bubble_with_clipboard(*get_response(message.message, corpus=key)),
             chat_input(
                 {
                     "hx-swap-oob": "true",

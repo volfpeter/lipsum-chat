@@ -20,6 +20,37 @@
 
     <!-- htmx -->
     <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+
+    <!-- Custom AlpineJS states. -->
+    <script>
+      document.addEventListener("alpine:init", () => {
+        // Clipboard state
+        Alpine.data("clipboard", () => ({
+          copied: false,
+          copy() {
+            const el = this.$refs.clipboardContent;
+            if (!el) return;
+            navigator.clipboard
+              .writeText((el.textContent ?? "").trim())
+              .then(() => {
+                this.copied = true;
+                setTimeout(() => {
+                  this.copied = false;
+                }, 2000);
+              })
+              .catch((err) => {
+                console.error("Failed to copy text: ", err);
+              });
+          },
+        }));
+      });
+    </script>
+
+    <!-- AlpineJS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
   <body class="flex flex-col items-center w-screen h-screen">
     <!-- slot[content] -->
